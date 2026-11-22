@@ -1,0 +1,18 @@
+
+# Configuración privada de MySQL
+/app/config.php
+
+# Archivo de prueba de conexión
+/probar_conexion.php
+
+# Archivos de respaldo
+/index_respaldo.txt
+/public/index_respaldo.txt
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

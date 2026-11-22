@@ -1,0 +1,222 @@
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+:root {
+    --azul: #173b72;
+    --azul-hover: #2459a0;
+    --azul-editar: #2563eb;
+    --rojo: #dc2626;
+    --rojo-hover: #b91c1c;
+    --texto: #1e293b;
+    --borde: #cbd5e1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+/* ENCABEZADO */
+header {
+    background: var(--azul);
+    color: #fff;
+    padding: 35px 20px;
+    text-align: center;
+}
+header h1 { margin: 0 0 12px; }
+header p { margin: 0; }
+
+/* CONTENIDO */
+main { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
+.tarjeta {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+}
+h2 { color: var(--azul); }
+
+/* FORMULARIOS */
+label { display: block; font-weight: bold; margin: 15px 0 6px; }
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font: inherit;
+    background: #fff;
+    color: var(--texto);
+}
+textarea { min-height: 100px; resize: vertical; }
+
+/* BOTONES GENERALES */
+button {
+    margin-top: 20px;
+    padding: 13px 24px;
+    background: var(--azul);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+}
+button:hover { background: var(--azul-hover); }
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 2px;
+}
+
+/* TABLA */
+.tabla-contenedor { width: 100%; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+}
+th { background: var(--azul); color: #fff; }
+tbody tr:nth-child(even) { background: #f1f5f9; }
+tbody tr:hover { background: #e0ecff; }
+th:last-child, td:last-child { text-align: center; }
+
+/* ACCIONES DE CADA TAREA */
+.celda-acciones { min-width: 230px; white-space: nowrap; }
+.acciones-tarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.formulario-eliminar,
+.acciones-tarea .formulario-eliminar {
+    display: inline-flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.boton-editar, .boton-eliminar,
+.acciones-tarea .boton-editar,
+.acciones-tarea .boton-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    min-width: 105px;
+    height: 44px;
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+}
+.boton-editar, .acciones-tarea .boton-editar { background: var(--azul-editar); }
+.boton-editar:hover, .acciones-tarea .boton-editar:hover { background: #1d4ed8; }
+.boton-eliminar, .acciones-tarea .boton-eliminar { background: var(--rojo); }
+.boton-eliminar:hover, .acciones-tarea .boton-eliminar:hover { background: var(--rojo-hover); }
+
+/* ESTADÍSTICAS */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.estadistica {
+    background: #edf3fb;
+    border: 1px solid #d5e1f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.estadistica h3 { color: #1c3d70; font-size: 16px; }
+.estadistica p { color: var(--azul); font-size: 32px; font-weight: bold; margin: 10px 0 0; }
+
+/* FILTROS */
+.formulario-filtros { margin-bottom: 20px; }
+.formulario-filtros a { display: inline-block; margin: 12px 0 0 10px; color: var(--azul); }
+
+/* MODAL DE CONFIRMACIÓN */
+.modal-fondo[hidden] { display: none !important; }
+.modal-fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, .65);
+}
+.modal-contenido {
+    width: 100%;
+    max-width: 440px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+    text-align: center;
+}
+.modal-icono { font-size: 40px; line-height: 1.2; }
+.modal-contenido h2 { margin: 12px 0; }
+.modal-contenido p { overflow-wrap: anywhere; }
+.modal-botones { display: flex; gap: 12px; margin-top: 22px; }
+.modal-botones button {
+    flex: 1;
+    margin: 0;
+    padding: 12px 14px;
+}
+.modal-botones button:first-child { background: #e2e8f0; color: #1e293b; }
+.modal-botones button:first-child:hover { background: #cbd5e1; }
+.modal-botones .boton-confirmar-eliminar { background: var(--rojo); color: #fff; }
+.modal-botones .boton-confirmar-eliminar:hover { background: var(--rojo-hover); }
+
+/* PIE DE PÁGINA */
+footer { text-align: center; padding: 20px; color: #64748b; }
+
+/* TABLETS */
+@media (max-width: 700px) {
+    .estadisticas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tarjeta { padding: 20px; }
+    th, td { padding: 10px; font-size: 14px; }
+    table { min-width: 850px; }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    header { padding: 25px 15px; }
+    main { padding: 0 10px; }
+    .tarjeta { padding: 18px; }
+    .estadistica { padding: 14px 8px; }
+    .estadistica h3 { font-size: 14px; }
+    .estadistica p { font-size: 26px; }
+    .celda-acciones { min-width: 195px; }
+    .acciones-tarea { gap: 8px; }
+    .boton-editar, .boton-eliminar,
+    .acciones-tarea .boton-editar,
+    .acciones-tarea .boton-eliminar {
+        width: 85px;
+        min-width: 85px;
+        height: 38px;
+        padding: 8px;
+        font-size: 13px;
+    }
+    .modal-contenido { padding: 24px 18px; }
+    .modal-botones { flex-direction: column; }
+    .formulario-filtros a { margin-left: 0; }
+}
