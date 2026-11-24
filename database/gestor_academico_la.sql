@@ -33,7 +33,7 @@ CREATE TABLE `tareas` (
   `estado` enum('Pendiente','En proceso','Completada') NOT NULL DEFAULT 'Pendiente',
   `creado_en` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,13 +42,9 @@ CREATE TABLE `tareas` (
 
 LOCK TABLES `tareas` WRITE;
 /*!40000 ALTER TABLE `tareas` DISABLE KEYS */;
-INSERT INTO `tareas` VALUES (1,'Estudiar HTML','Desarrollo Web','Repasar etiquetas HTML','2026-11-25','Pendiente','2026-11-22 01:08:54'),(2,'Practicar MySQL','Base de Datos','Realizar consultas SQL','2026-11-26','En proceso','2026-11-22 01:08:54'),(3,'Informe de minería','Minería de Datos','Preparar el informe final','2026-11-27','Completada','2026-11-22 01:08:54'),(5,'Configuracion de AWS','Servicios en la Nube','Desarrolla la actividad propuesta','2026-11-23','Pendiente','2026-11-22 01:36:45'),(6,'Conifguracion del servidor en AWS','Servicios en la Nube','Desarrolla la actividad propuesta','2026-11-23','Completada','2026-11-22 01:37:14'),(7,'P.A.E. - Práctica_01: La nube invisible, servicios que utilizamos todos los días','Servicios en  la Nube','Desarrolla la actividad Practica propuesta','2026-11-24','Completada','2026-11-22 01:58:43'),(9,'Prueba del sistema','Desarrollo Web','Verificar el registro y la edición','2026-11-25','Pendiente','2026-11-22 02:09:38');
+INSERT INTO `tareas` VALUES (1,'Estudiar HTML','Desarrollo Web','Repasar etiquetas HTML','2026-11-25','Pendiente','2026-11-22 01:08:54'),(2,'Practicar MySQL','Base de Datos','Realizar consultas SQL','2026-11-26','En proceso','2026-11-22 01:08:54'),(3,'Informe de minería','Minería de Datos','Preparar el informe final','2026-11-27','Completada','2026-11-22 01:08:54'),(5,'Configuracion de AWS','Servicios en la Nube','Desarrolla la actividad propuesta','2026-11-23','Pendiente','2026-11-22 01:36:45'),(6,'Conifguracion del servidor en AWS','Servicios en la Nube','Desarrolla la actividad propuesta','2026-11-23','Completada','2026-11-22 01:37:14'),(7,'P.A.E. - Práctica_01: La nube invisible, servicios que utilizamos todos los días','Servicios en  la Nube','Desarrolla la actividad Practica propuesta','2026-11-24','Completada','2026-11-22 01:58:43'),(9,'Prueba del sistema','Desarrollo Web','Verificar el registro y la edición','2026-11-25','Pendiente','2026-11-22 02:09:38'),(15,'Informe <A4> & prácticas','Desarrollo Web','Prueba de símbolos <A4> y &','2026-11-30','Pendiente','2026-11-23 23:23:41'),(16,'Prueba de estado válido','Desarrollo Web','Comprobación de regla de negocio','2026-11-30','Pendiente','2026-11-23 23:27:58');
 /*!40000 ALTER TABLE `tareas` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'gestor_academico_la'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -59,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-21 22:04:58
+-- Dump completed on 2026-11-23 19:03:08
